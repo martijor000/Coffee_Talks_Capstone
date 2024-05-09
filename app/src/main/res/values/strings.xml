@@ -37,4 +37,10 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus vestibulum. Fusce
         dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="profile_name">Example Profile</string>
+    <string name="age">55</string>
+    <string name="major_name">IT</string>
+    <string name="likes_count">99</string>
+    <string name="email">email</string>
+    <string name="college_name">college</string>
 </resources>
