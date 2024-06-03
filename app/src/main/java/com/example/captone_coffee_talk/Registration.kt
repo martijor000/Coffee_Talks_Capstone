@@ -16,11 +16,12 @@ class Registration : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.registrationSave.setOnClickListener {
-            val username = binding.registrationName
+            val username = binding.registrationUsername
             val password = binding.registrationPassword
             val email = binding.registrationEmail
 
-            if (username != null && password != null && email != null) {
+            // TODO Change this if statement 1. check for value 2. properly added to Database.
+            if (username != null && password != null && email != null)  {
                 Toast.makeText(this, "Profile Saved", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, Login::class.java))
             }

@@ -11,14 +11,16 @@
         tools:context=".Registration">
 
     <EditText
-            android:id="@+id/registration_name"
+            android:id="@+id/registration_Username"
             android:layout_width="match_parent"
             android:hint="@string/Label_Username"
+            android:inputType="textVisiblePassword|textNoSuggestions"
             android:layout_height="wrap_content" />
     <EditText
             android:id="@+id/registration_email"
             android:layout_width="match_parent"
             android:hint="@string/Label_Email"
+            android:inputType="textEmailAddress"
             android:layout_height="wrap_content" />
     <EditText
             android:id="@+id/registration_password"
