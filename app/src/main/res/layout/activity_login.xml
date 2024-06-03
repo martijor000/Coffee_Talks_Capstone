@@ -10,12 +10,14 @@
         tools:context=".Login">
 
     <EditText
+            android:importantForAutofill="no"
             android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:hint="@string/Label_Email"/>
     <EditText
+            android:importantForAutofill="no"
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
