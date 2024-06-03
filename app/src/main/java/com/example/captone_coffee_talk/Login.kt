@@ -1,5 +1,6 @@
 package com.example.captone_coffee_talk
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -27,7 +28,8 @@ class Login : AppCompatActivity() {
             }
         }
         binding.activityLogInRegisterButton.setOnClickListener{
-
+            startActivity(Intent(this, Registration::class.java))
+            finish()
         }
     }
 }
