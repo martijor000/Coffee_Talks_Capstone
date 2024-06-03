@@ -43,4 +43,12 @@
     <string name="likes_count">99</string>
     <string name="email">email</string>
     <string name="college_name">college</string>
+
+    <string name="Label_Password">Password</string>
+    <string name="Label_Username">User Name</string>
+    <string name="Label_Email">Email</string>
+    <string name="Button_Save">Save</string>
+    <string name="Button_Login">Log In</string>
+    <string name="Button_Register">Register</string>
+    
 </resources>

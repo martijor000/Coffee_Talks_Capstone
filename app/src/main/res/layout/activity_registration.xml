@@ -13,23 +13,23 @@
     <EditText
             android:id="@+id/registration_name"
             android:layout_width="match_parent"
-            android:hint="Username"
+            android:hint="@string/Label_Username"
             android:layout_height="wrap_content" />
     <EditText
             android:id="@+id/registration_email"
             android:layout_width="match_parent"
-            android:hint="Email"
+            android:hint="@string/Label_Email"
             android:layout_height="wrap_content" />
     <EditText
             android:id="@+id/registration_password"
             android:layout_width="match_parent"
-            android:hint="Password"
+            android:hint="@string/Label_Password"
             android:inputType="textPassword"
             android:layout_height="wrap_content" />
     <Button
             android:id="@+id/registration_save"
             android:layout_width="wrap_content"
-            android:text="Save"
+            android:text="@string/Button_Save"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content" />
 </LinearLayout>
