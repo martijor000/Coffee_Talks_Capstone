@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="50dp"
         android:id="@+id/registrationLayout"
-        tools:context=".Registration">
+        tools:context=".Registration"
+        android:orientation="vertical">
 
     <EditText
             android:importantForAutofill="no"
@@ -30,10 +30,17 @@
             android:hint="@string/Label_Password"
             android:inputType="textPassword"
             android:layout_height="wrap_content" />
+    <EditText
+            android:importantForAutofill="no"
+            android:id="@+id/registration_confirm_password"
+            android:layout_width="match_parent"
+            android:hint="@string/Label_Password"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
     <Button
             android:id="@+id/registration_save"
             android:layout_width="wrap_content"
             android:text="@string/Button_Save"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content" />
-</LinearLayout>
+    </LinearLayout>

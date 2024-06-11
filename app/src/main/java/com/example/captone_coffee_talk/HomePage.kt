@@ -21,6 +21,10 @@ class HomePage : Activity() {
             startActivity(Intent(this, ProfileActivity::class.java))
             finish()
         }
+        val homeBtn = findViewById<ImageButton>(R.id.homeButton)
+        homeBtn.setOnClickListener {
+            startActivity(Intent(this, Login::class.java))
+        }
         val firestore = FirestoreManager.getFirestore()
         val results = firestoreService.getDocument("block", "YBLailbCxo05yGyuCxHW")
         print(results)
