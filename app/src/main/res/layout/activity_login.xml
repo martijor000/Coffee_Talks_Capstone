@@ -4,34 +4,44 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
         android:orientation="vertical"
         tools:context=".Login">
 
-    <EditText
-            android:importantForAutofill="no"
-            android:id="@+id/login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="@string/Label_Email"/>
-    <EditText
-            android:importantForAutofill="no"
-            android:id="@+id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/Label_Password" />
-    <Button
-            android:id="@+id/activity_log_in_login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/Button_Login"/>
-    <Button
-            android:id="@+id/activity_log_in_register_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/Button_Register"/>
+    <include layout="@layout/home_page"/>
+
+    <LinearLayout
+            android:layout_margin="100dp"
+            android:layout_width="311dp"
+            android:layout_height="486dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            tools:context=".Login">
+        <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/Label_Email" android:minHeight="48dp" android:textColorHint="#546E7A"/>
+        <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/Label_Password" android:minHeight="48dp" android:textColorHint="#546E7A"/>
+        <Button
+                android:id="@+id/activity_log_in_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/Button_Login"/>
+        <Button
+                android:id="@+id/activity_log_in_register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/Button_Register"/>
+    </LinearLayout>
+
 </LinearLayout>

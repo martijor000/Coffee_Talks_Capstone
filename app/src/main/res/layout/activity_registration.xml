@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -9,6 +8,15 @@
         tools:context=".Registration"
         android:orientation="vertical">
 
+    <include layout="@layout/home_page"/>
+
+    <LinearLayout
+            android:layout_margin="100dp"
+            android:layout_width="311dp"
+            android:layout_height="486dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            tools:context=".Registration">
     <EditText
             android:importantForAutofill="no"
             android:id="@+id/registration_Username"
@@ -44,3 +52,4 @@
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content" />
     </LinearLayout>
+</LinearLayout>

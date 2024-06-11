@@ -23,7 +23,7 @@ class Registration : AppCompatActivity() {
     lateinit var password :EditText
     lateinit var confirmPassword :EditText
     lateinit var registrationBtn : Button
-    lateinit var redirectLogin: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
