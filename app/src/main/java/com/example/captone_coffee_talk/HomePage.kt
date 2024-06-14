@@ -21,6 +21,10 @@ class HomePage : Activity() {
             startActivity(Intent(this, ProfileActivity::class.java))
             finish()
         }
+        val messageBtn = findViewById<ImageButton>(R.id.messageButton)
+        messageBtn.setOnClickListener {
+            startActivity(Intent(this, UsersActivity::class.java))
+        }
         val homeBtn = findViewById<ImageButton>(R.id.homeButton)
         homeBtn.setOnClickListener {
             startActivity(Intent(this, Login::class.java))
@@ -30,3 +34,4 @@ class HomePage : Activity() {
         print(results)
     } // Other methods and logic specific to your HomePage class
 }
+
