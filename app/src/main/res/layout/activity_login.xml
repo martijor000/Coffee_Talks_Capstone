@@ -42,6 +42,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/Button_Register"/>
+        <Button
+                android:id="@+id/activity_log_out_register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Log Out"/>
     </LinearLayout>
 
 </LinearLayout>
