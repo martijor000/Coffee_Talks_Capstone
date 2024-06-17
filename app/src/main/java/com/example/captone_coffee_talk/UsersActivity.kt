@@ -1,12 +1,14 @@
 package com.example.captone_coffee_talk
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.firestore.FirebaseFirestore
+
 
 class UsersActivity : AppCompatActivity() {
 
@@ -34,19 +36,19 @@ class UsersActivity : AppCompatActivity() {
         userRecyclerView.adapter = adapter
 
         mDbRef.child("user").addValueEventListener(object: ValueEventListener {
-        override fun onDataChange(snapshot: DataSnapshot) {
-          userList.clear()
-          for(postSnapshot in snapshot.children){
-              val currentUser = postSnapshot.getValue(User::class.java)
-              if(mAuth.currentUser?.uid != currentUser?.uId){
-                  userList.add(currentUser!!)
-              }
-              userList.add(currentUser!!)
-          }
-          adapter.notifyDataSetChanged()
-          }
-          override fun onCancelled(error: DatabaseError) {
-          }
+            override fun onDataChange(snapshot: DataSnapshot) {
+                userList.clear()
+                for(postSnapshot in snapshot.children){
+                    val currentUser = postSnapshot.getValue(User::class.java)
+                    if(mAuth.currentUser?.uid != currentUser?.id){
+                        userList.add(currentUser!!)
+                    }
+                    userList.add(currentUser!!)
+                }
+                adapter.notifyDataSetChanged()
+            }
+            override fun onCancelled(error: DatabaseError) {
+            }
         })
     }
 }

@@ -24,7 +24,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>): Recycler
             val intent = Intent(context, ChatActivity::class.java)
 
             intent.putExtra("user", currentUser.name)
-            intent.putExtra("username", currentUser.uId)
+            intent.putExtra("username", currentUser.id)
 
             context.startActivity(intent)
         }
