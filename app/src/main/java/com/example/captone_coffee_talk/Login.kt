@@ -40,11 +40,11 @@ class Login :  AppCompatActivity ()  {
             startActivity(Intent(this, Registration::class.java))
             finish()
         }
-        binding.activityLogOutRegisterButton.setOnClickListener{
-            auth.signOut()
-            Toast.makeText(baseContext, "Logged out", Toast.LENGTH_SHORT).show()
-            finish()
-        }
+//        binding.activityLogOutRegisterButton.setOnClickListener{
+//            auth.signOut()
+//            Toast.makeText(baseContext, "Logged out", Toast.LENGTH_SHORT).show()
+//            finish()
+//        }
     }
     private fun login(){
         val email = email.text.toString()
