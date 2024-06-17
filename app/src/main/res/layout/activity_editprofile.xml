@@ -6,7 +6,7 @@
               android:orientation="vertical"
               android:background="#0a4018"
               tools:context=".EditProfileActivity">
-
+    <include layout="@layout/home_page"/>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

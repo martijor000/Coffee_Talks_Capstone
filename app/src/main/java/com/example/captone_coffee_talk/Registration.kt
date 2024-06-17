@@ -11,18 +11,22 @@ import com.example.captone_coffee_talk.databinding.ActivityRegistrationBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.auth.User
 
 class Registration : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistrationBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+    //private lateinit var db: FirebaseFirestore
 
-    lateinit var username :EditText
-    lateinit var email :EditText
-    lateinit var password :EditText
-    lateinit var confirmPassword :EditText
-    lateinit var registrationBtn : Button
+    private lateinit var username :EditText
+    private lateinit var email :EditText
+    private lateinit var password :EditText
+    private lateinit var confirmPassword :EditText
+    private lateinit var registrationBtn : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,14 +59,21 @@ class Registration : AppCompatActivity() {
                 Toast.makeText(this, "Passwords don't match", Toast.LENGTH_SHORT).show()
             return
         }
+        fun writeNewUser( ) {
+            val ref = FirebaseDatabase.getInstance().getReference("/user/")
+            val user = Firebase.auth.currentUser
+            ref.setValue(user)
+        }
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully created", Toast.LENGTH_SHORT).show()
+                writeNewUser()
                 finish()
             } else {
                 Toast.makeText(this, "Sign up Failed", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }
 

@@ -9,7 +9,8 @@ import android.widget.Toast
 import com.example.captone_coffee_talk.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class Login :  AppCompatActivity() {
+
+class Login :  AppCompatActivity ()  {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var email: EditText
@@ -39,6 +40,11 @@ class Login :  AppCompatActivity() {
             startActivity(Intent(this, Registration::class.java))
             finish()
         }
+//        binding.activityLogOutRegisterButton.setOnClickListener{
+//            auth.signOut()
+//            Toast.makeText(baseContext, "Logged out", Toast.LENGTH_SHORT).show()
+//            finish()
+//        }
     }
     private fun login(){
         val email = email.text.toString()
@@ -53,4 +59,5 @@ class Login :  AppCompatActivity() {
                 Toast.makeText(baseContext, "Login Failed", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

@@ -8,9 +8,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
-class HomePage : Activity() {
+ class HomePage : Activity() {
     private val firestoreService = FirestoreService()
+    private val  auth = FirebaseAuth.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +33,12 @@ class HomePage : Activity() {
         val homeBtn = findViewById<ImageButton>(R.id.homeButton)
         homeBtn.setOnClickListener {
             startActivity(Intent(this, Login::class.java))
+            finish()
         }
         val firestore = FirestoreManager.getFirestore()
         val results = firestoreService.getDocument("block", "YBLailbCxo05yGyuCxHW")
         print(results)
     } // Other methods and logic specific to your HomePage class
+
 }
 
