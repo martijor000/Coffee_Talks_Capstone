@@ -26,6 +26,10 @@ import com.google.firebase.firestore.FirebaseFirestore
             startActivity(Intent(this, ProfileActivity::class.java))
             finish()
         }
+        val messageBtn = findViewById<ImageButton>(R.id.messageButton)
+        messageBtn.setOnClickListener {
+            startActivity(Intent(this, UsersActivity::class.java))
+        }
         val homeBtn = findViewById<ImageButton>(R.id.homeButton)
         homeBtn.setOnClickListener {
             startActivity(Intent(this, Login::class.java))
@@ -37,3 +41,4 @@ import com.google.firebase.firestore.FirebaseFirestore
     } // Other methods and logic specific to your HomePage class
 
 }
+
