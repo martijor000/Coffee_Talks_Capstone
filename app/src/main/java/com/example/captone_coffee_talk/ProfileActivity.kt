@@ -28,7 +28,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.btnLogOutProfile.setOnClickListener{
             auth.signOut()
             Toast.makeText(baseContext, "Logged out", Toast.LENGTH_SHORT).show()
-            finish()
+            startActivity(Intent(this, Login::class.java))
         }
 
     }
