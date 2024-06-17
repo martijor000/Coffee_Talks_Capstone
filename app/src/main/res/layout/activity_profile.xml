@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="405dp">
         <LinearLayout
-                android:background="#0a4018"
+                android:background="@color/teal_700"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 android:orientation="vertical">
@@ -59,7 +59,7 @@
                                     android:textStyle="bold"
                                     android:paddingTop="10dp"
                                     android:textSize="20sp"
-                                    android:textColor="#21cf4f"
+                                    android:textColor="@color/teal_700"
                                 />
                         </LinearLayout>
                     <LinearLayout
@@ -80,7 +80,7 @@
                                 android:textStyle="bold"
                                 android:paddingTop="10dp"
                                 android:textSize="20sp"
-                                android:textColor="#21cf4f"
+                                android:textColor="@color/teal_700"
                         />
                     </LinearLayout>
                     <LinearLayout
@@ -101,7 +101,7 @@
                                 android:textStyle="bold"
                                 android:paddingTop="10dp"
                                 android:textSize="20sp"
-                                android:textColor="#21cf4f"
+                                android:textColor="@color/teal_700"
                         />
                     </LinearLayout>
                 </LinearLayout>
@@ -139,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Edit Profile"
-                    android:textColor="#000"
+                    android:textColor="@color/white"
                     android:textSize="21sp"/>
         <Button
                 android:id="@+id/btnLogOutProfile"
@@ -148,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Log Out"
-                android:textColor="#000"
+                android:textColor="@color/white"
                 android:textSize="21sp"/>
     </LinearLayout>
 </LinearLayout>
