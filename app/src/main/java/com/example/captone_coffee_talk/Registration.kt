@@ -67,7 +67,8 @@ class Registration : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully created", Toast.LENGTH_SHORT).show()
-                writeNewUser()
+                startActivity(Intent(this, ProfileActivity::class.java))
+               // writeNewUser()
                 finish()
             } else {
                 Toast.makeText(this, "Sign up Failed", Toast.LENGTH_SHORT).show()
