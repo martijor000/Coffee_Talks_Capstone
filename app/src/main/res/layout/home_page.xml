@@ -76,8 +76,10 @@
             android:layout_height="48dp"
             android:background="@android:color/transparent"
             android:src="@drawable/comment_alt_24"
+            app:layout_constraintEnd_toStartOf="@+id/logOutButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
             android:id="@+id/logOutButton"
             android:layout_width="48dp"
@@ -86,4 +88,5 @@
             android:src="@drawable/bell_18"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
